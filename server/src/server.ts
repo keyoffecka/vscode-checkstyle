@@ -101,7 +101,7 @@ async function checkstyle(textDocumentUri: string, force?: boolean): Promise<voi
         } else {
             const errorMessage: string = getErrorMessage(error);
             connection.sendNotification(ErrorNotification.notificationType, {errorMessage});
-            connection.console.error(errorMessage);
+            //connection.console.error(errorMessage);
         }
     } finally {
         if (result) {
